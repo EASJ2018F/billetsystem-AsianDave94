@@ -18,5 +18,9 @@ namespace ClassLibrary1
         {
             return 240;
         }
+        public string Køretøj()
+        {
+            return "Bil";
+        }
     }
 }
