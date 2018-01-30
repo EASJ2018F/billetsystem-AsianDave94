@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class MC
+   public class MC
     {
         public string Nummerplade
         {
