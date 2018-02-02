@@ -10,11 +10,25 @@ namespace BilletSys
     {
         public override int Pris()
         {
-            return 240;
+            int PrisMedBrobizz = 240 - Rabat;
+
+            if (PrisMedBrobizz <= 0)
+                throw new ArgumentException("For stor rabat");
+            return PrisMedBrobizz;
         }
         public override string Type()
         {
             return "Bil";
+        }
+        public Bil() 
+            :base()
+        {
+
+        }
+        public Bil(int rabat) 
+            :base(rabat)
+        {
+
         }
     }
     

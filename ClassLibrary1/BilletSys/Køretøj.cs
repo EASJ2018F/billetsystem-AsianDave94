@@ -15,7 +15,7 @@ namespace BilletSys
             get { return Nummerplade; }
             set { value = Nummerplade; }
         }
-        public DateTime Dato
+        public virtual DateTime Dato
         {
             get { return Dato; }
             set { value = Dato; }
@@ -24,6 +24,19 @@ namespace BilletSys
         public virtual string Type()
         {
             return "Køretøj";
+        }
+        public int Rabat
+        {
+            get;
+            set;
+        }
+        public Køretøj()
+        {
+
+        }
+        public Køretøj(int rabat)
+        {
+            this.Rabat = rabat;
         }
     }
 }

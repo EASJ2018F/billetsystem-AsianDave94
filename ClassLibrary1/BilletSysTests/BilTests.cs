@@ -20,6 +20,14 @@ namespace BilletSys.Tests
 
             Assert.AreEqual(240, Pris);
         }
+        public void PrisTestMedBrobizz()
+        {
+            var bil = new Bil();
+
+            int Pris = bil.Pris();
+
+            Assert.AreEqual(240, Pris);
+        }
 
         [TestMethod()]
         public void KøretøjTest()
@@ -30,5 +38,5 @@ namespace BilletSys.Tests
 
             Assert.AreEqual("Bil", Køretøj);
         }
-    }
+        }
 }
