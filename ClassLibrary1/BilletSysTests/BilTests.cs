@@ -62,7 +62,7 @@ namespace BilletSys.Tests
         [TestMethod()]
         public void PrisUdenBrobizzOgWeekendTest()
         {
-            DateTime Dato = new DateTime(2018, 02, 03);
+            DateTime Dato = new DateTime(2018, 02, 04);
             Bil b1 = new Bil("1234567", Dato);
 
             b1.Brobizz = false;
