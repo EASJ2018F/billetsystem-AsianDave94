@@ -14,13 +14,21 @@ namespace BilletSys.Tests
         [TestMethod()]
         public void PrisTest()
         {
-            Assert.Fail();
+            var mc = new MC();
+
+            int Pris = mc.Pris();
+
+            Assert.AreEqual(125, Pris);
         }
 
         [TestMethod()]
         public void KøretøjTest()
         {
-            Assert.Fail();
+            var mc = new MC();
+
+            string Køretøj = mc.Køretøj();
+
+            Assert.AreEqual("MC", Køretøj);
         }
     }
 }
