@@ -26,7 +26,7 @@ namespace BilletSys.Tests
         {
             var mc = new MC();
 
-            string Køretøj = mc.Køretøj();
+            string Køretøj = mc.Type();
 
             Assert.AreEqual("MC", Køretøj);
         }

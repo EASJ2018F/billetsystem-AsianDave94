@@ -10,11 +10,11 @@ namespace BilletSys
     {
         public override int Pris()
         {
-            return 240;
+            return 125;
         }
         public override string Type()
         {
-            return "Bil";
+            return "MC";
         }
     }
 }
