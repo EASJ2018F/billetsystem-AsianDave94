@@ -12,7 +12,10 @@ namespace BilletSys
         
         public virtual string Nummerplade
         {
-            get { return Nummerplade; }
+            get
+            {
+            return Nummerplade;
+            }
             set { value = Nummerplade; }
         }
         public virtual DateTime Dato
@@ -27,16 +30,19 @@ namespace BilletSys
         }
         public int Rabat
         {
-            get;
-            set;
+            get;set;
         }
-        public Køretøj()
+        public Køretøj( string Nummerplade, DateTime Dato)
         {
-
+            if (Nummerplade.Length > 7)
+            {
+                throw new ArgumentException("Nummerplade er for lang");
+            }
         }
         public Køretøj(int rabat)
         {
             this.Rabat = rabat;
         }
+       
     }
 }

@@ -20,8 +20,8 @@ namespace BilletSys
         {
             return "Bil";
         }
-        public Bil() 
-            :base()
+        public Bil(string Nummerplade, DateTime Dato) 
+            :base(Nummerplade, Dato)
         {
 
         }

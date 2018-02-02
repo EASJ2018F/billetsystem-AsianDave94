@@ -8,6 +8,11 @@ namespace BilletSys
 {
     public class MC : Køretøj
     {
+        public MC(string Nummerplade, DateTime Dato) : 
+            base(Nummerplade, Dato)
+        {
+        }
+
         public override int Pris()
         {
             int PrisMedBrobizz = 125 - Rabat;
@@ -20,6 +25,6 @@ namespace BilletSys
         {
             return "MC";
         }
-
+        
     }
 }
