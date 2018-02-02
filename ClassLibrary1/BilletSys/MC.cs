@@ -6,25 +6,15 @@ using System.Threading.Tasks;
 
 namespace BilletSys
 {
-    public class MC
+    public class MC : Køretøj
     {
-        public string Nummerplade
+        public override int Pris()
         {
-            get { return Nummerplade; }
-            set { value = Nummerplade; }
+            return 240;
         }
-        public DateTime Dato
+        public override string Type()
         {
-            get { return Dato; }
-            set { value = Dato; }
-        }
-        public int Pris()
-        {
-            return 125;
-        }
-        public string Køretøj()
-        {
-            return "MC";
+            return "Bil";
         }
     }
 }

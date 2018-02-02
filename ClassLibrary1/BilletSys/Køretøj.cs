@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace BilletSys
 {
-    class Køretøj
+    public abstract class Køretøj
     {
-        public string Nummerplade
+        public abstract int Pris();
+        
+        public virtual string Nummerplade
         {
             get { return Nummerplade; }
             set { value = Nummerplade; }
@@ -18,9 +20,10 @@ namespace BilletSys
             get { return Dato; }
             set { value = Dato; }
         }
-        public int Pris()
+        
+        public virtual string Type()
         {
-            return 0;
+            return "Køretøj";
         }
     }
 }
