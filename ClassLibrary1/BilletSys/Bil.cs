@@ -30,6 +30,10 @@ namespace BilletSys
         {
 
         }
+        public string Nummerplade()
+        {
+            return "13245678";
+        }
     }
     
 }

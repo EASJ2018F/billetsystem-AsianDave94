@@ -38,5 +38,10 @@ namespace BilletSys.Tests
 
             Assert.AreEqual("Bil", Køretøj);
         }
+        public void NummerpladeTestMedForMange()
+        {
+            
+
         }
+    }
 }
