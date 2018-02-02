@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{E619E98E-BFAC-4EC4-A096-33ADA82DD762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletSys", "BilletSys\BilletSys.csproj", "{1948FB1D-703C-48CB-A918-55E0E4B1F59F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletSysTests", "BilletSysTests\BilletSysTests.csproj", "{9ADD8F72-F4E1-4020-A6EE-AA95BE5E5BDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E619E98E-BFAC-4EC4-A096-33ADA82DD762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E619E98E-BFAC-4EC4-A096-33ADA82DD762}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E619E98E-BFAC-4EC4-A096-33ADA82DD762}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E619E98E-BFAC-4EC4-A096-33ADA82DD762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1948FB1D-703C-48CB-A918-55E0E4B1F59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1948FB1D-703C-48CB-A918-55E0E4B1F59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1948FB1D-703C-48CB-A918-55E0E4B1F59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1948FB1D-703C-48CB-A918-55E0E4B1F59F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADD8F72-F4E1-4020-A6EE-AA95BE5E5BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADD8F72-F4E1-4020-A6EE-AA95BE5E5BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADD8F72-F4E1-4020-A6EE-AA95BE5E5BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADD8F72-F4E1-4020-A6EE-AA95BE5E5BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
