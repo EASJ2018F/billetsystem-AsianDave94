@@ -10,14 +10,19 @@ namespace BilletSys
     {
         public override int Pris()
         {
+            if (Brobizz == true && Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday)
+            {
+                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
+            }
+            if (Brobizz == false && Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday)
+            {
+                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
+            }
             if (Brobizz == true)
             {
                 return 240-240/100*5;
             }
-            //if (Brobizz == true && Dato.DayOfWeek==DayOfWeek.Saturday || Dato.DayOfWeek== DayOfWeek.Sunday)
-            //{
-            //    return (240 - (240 / 100 * 5) - (240 / 100 * 20));
-            //}
+            
             return 240;
         }
         public override string Type()

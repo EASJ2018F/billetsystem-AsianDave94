@@ -16,8 +16,7 @@ namespace BilletSys
         }
         public virtual DateTime Dato
         {
-            get { return Dato; }
-            set { value = Dato; }
+            get;set;
         }
         
         public bool Brobizz { get; set; }

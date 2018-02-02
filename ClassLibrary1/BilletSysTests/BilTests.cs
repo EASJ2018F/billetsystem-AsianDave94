@@ -49,5 +49,16 @@ namespace BilletSys.Tests
 
             Assert.AreEqual(230, pris);
         }
+        [TestMethod()]
+        public void PrisMedBrobizzOgWeekendTest()
+        {
+            DateTime Dato = new DateTime(2018,02,03);
+            Bil b1 = new Bil("1234567", DateTime.Today);
+            
+            b1.Brobizz = true;
+            int pris = b1.Pris();
+
+            Assert.AreEqual(180, pris);
+        }
     }
 }
