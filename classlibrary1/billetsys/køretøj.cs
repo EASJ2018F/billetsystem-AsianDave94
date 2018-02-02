@@ -12,11 +12,7 @@ namespace BilletSys
         
         public virtual string Nummerplade
         {
-            get
-            {
-            return Nummerplade;
-            }
-            set { value = Nummerplade; }
+            get;set; 
         }
         public virtual DateTime Dato
         {

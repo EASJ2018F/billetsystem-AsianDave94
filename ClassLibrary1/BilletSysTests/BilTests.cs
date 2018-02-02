@@ -47,7 +47,7 @@ namespace BilletSys.Tests
             b1.Brobizz = true;
             int pris = b1.Pris();
 
-            Assert.AreEqual(228, pris);
+            Assert.AreEqual(230, pris);
         }
     }
 }

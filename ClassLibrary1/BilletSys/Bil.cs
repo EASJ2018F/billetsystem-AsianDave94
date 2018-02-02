@@ -12,12 +12,12 @@ namespace BilletSys
         {
             if (Brobizz == true)
             {
-                return (240 - (240/100*5));
+                return 240-240/100*5;
             }
-            if (Brobizz == true && Dato.DayOfWeek==DayOfWeek.Saturday || Dato.DayOfWeek== DayOfWeek.Sunday)
-            {
-                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
-            }
+            //if (Brobizz == true && Dato.DayOfWeek==DayOfWeek.Saturday || Dato.DayOfWeek== DayOfWeek.Sunday)
+            //{
+            //    return (240 - (240 / 100 * 5) - (240 / 100 * 20));
+            //}
             return 240;
         }
         public override string Type()
@@ -29,7 +29,7 @@ namespace BilletSys
         {
 
         }
-        public string Nummerplade()
+        public  string Nummerplade()
         {
             return "13245678";
         }
