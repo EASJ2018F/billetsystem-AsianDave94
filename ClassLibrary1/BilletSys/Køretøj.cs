@@ -8,15 +8,11 @@ namespace BilletSys
 {
     public abstract class Køretøj
     {
-        public abstract double Pris();
+        public abstract int Pris();
         
         public virtual string Nummerplade
         {
-            get
-            {
-            return Nummerplade;
-            }
-            set { value = Nummerplade; }
+            get;set; 
         }
         public virtual DateTime Dato
         {

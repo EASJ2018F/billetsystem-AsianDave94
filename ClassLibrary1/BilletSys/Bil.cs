@@ -8,16 +8,17 @@ namespace BilletSys
 {
     public class Bil : Køretøj
     {
-        public override double Pris()
+        public override int Pris()
         {
             if (Brobizz == true)
             {
-                return 240 *0.95;
+                return (240 - (240/100*5));
             }
-            else
+            if (Brobizz == true && Dato.DayOfWeek==DayOfWeek.Saturday || Dato.DayOfWeek== DayOfWeek.Sunday)
             {
-                return 240;
+                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
             }
+            return 240;
         }
         public override string Type()
         {

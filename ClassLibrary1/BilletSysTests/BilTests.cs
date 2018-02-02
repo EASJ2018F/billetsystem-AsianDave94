@@ -16,18 +16,11 @@ namespace BilletSys.Tests
         {
             var bil = new Bil("1234567", DateTime.Today);
 
-            double Pris = bil.Pris();
+            int Pris = bil.Pris();
 
             Assert.AreEqual(240, Pris);
         }
-        public void PrisTestMedBrobizz()
-        {
-            var bil = new Bil("1234567", DateTime.Today);
-
-            double Pris = bil.Pris();
-
-            Assert.AreEqual(240, Pris);
-        }
+        
 
         [TestMethod()]
         public void KøretøjTest()
@@ -52,7 +45,7 @@ namespace BilletSys.Tests
             Bil b1 = new Bil("1234567", DateTime.Today);
 
             b1.Brobizz = true;
-            double pris = b1.Pris();
+            int pris = b1.Pris();
 
             Assert.AreEqual(228, pris);
         }

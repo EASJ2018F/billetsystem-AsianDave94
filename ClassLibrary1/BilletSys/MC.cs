@@ -13,11 +13,11 @@ namespace BilletSys
         {
         }
 
-        public override double Pris()
+        public override int Pris()
         {
             if (Brobizz == true)
             {
-                return 125*0.95;
+                return 125 - (125/100-5);
             }
             return 125;
         }

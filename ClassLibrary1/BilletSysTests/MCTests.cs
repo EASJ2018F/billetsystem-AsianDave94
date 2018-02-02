@@ -16,7 +16,7 @@ namespace BilletSys.Tests
         {
             var mc = new MC("1234567", DateTime.Today);
 
-            double Pris = mc.Pris();
+            int Pris = mc.Pris();
 
             Assert.AreEqual(125, Pris);
         }
