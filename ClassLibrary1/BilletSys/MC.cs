@@ -13,7 +13,7 @@ namespace BilletSys
         {
         }
 
-        public override int Pris()
+        public override int Pris(int pris)
         {
             if (Brobizz == true)
             {

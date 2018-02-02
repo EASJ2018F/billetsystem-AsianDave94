@@ -16,7 +16,7 @@ namespace BilletSys.Tests
         {
             var bil = new Bil("1234567", DateTime.Today);
 
-            int Pris = bil.Pris();
+            int Pris = bil.Pris(240);
 
             Assert.AreEqual(240, Pris);
         }
@@ -45,7 +45,7 @@ namespace BilletSys.Tests
             Bil b1 = new Bil("1234567", DateTime.Today);
 
             b1.Brobizz = true;
-            int pris = b1.Pris();
+            int pris = b1.Pris(240);
 
             Assert.AreEqual(230, pris);
         }
@@ -53,12 +53,22 @@ namespace BilletSys.Tests
         public void PrisMedBrobizzOgWeekendTest()
         {
             DateTime Dato = new DateTime(2018,02,03);
-            Bil b1 = new Bil("1234567", DateTime.Today);
+            Bil b1 = new Bil("1234567", Dato);
             
-            b1.Brobizz = true;
-            int pris = b1.Pris();
+            int pris = b1.Pris(240);
 
-            Assert.AreEqual(180, pris);
+            Assert.AreEqual(190, pris);
+        }
+        [TestMethod()]
+        public void PrisUdenBrobizzOgWeekendTest()
+        {
+            DateTime Dato = new DateTime(2018, 02, 03);
+            Bil b1 = new Bil("1234567", Dato);
+
+            b1.Brobizz = false;
+            int pris = b1.Pris(240);
+
+            Assert.AreEqual(200, pris);
         }
     }
 }

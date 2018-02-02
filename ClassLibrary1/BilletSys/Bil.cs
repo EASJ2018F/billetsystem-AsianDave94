@@ -8,22 +8,21 @@ namespace BilletSys
 {
     public class Bil : Køretøj
     {
-        public override int Pris()
+        public override int Pris(int pris)
         {
-            if (Brobizz == true && Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday)
+            if (Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday && Brobizz)
             {
-                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
+                return pris - (((pris / 100 * 5) + (pris / 100 * 20)));
             }
-            if (Brobizz == false && Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday)
+            if (Dato.DayOfWeek == DayOfWeek.Saturday || Dato.DayOfWeek == DayOfWeek.Sunday && Brobizz==false)
             {
-                return (240 - (240 / 100 * 5) - (240 / 100 * 20));
+                return pris - pris / 100 * 20;
             }
-            if (Brobizz == true)
+            if (Brobizz)
             {
-                return 240-240/100*5;
+                return pris - pris / 100 * 5;
             }
-            
-            return 240;
+            return pris;
         }
         public override string Type()
         {
@@ -33,10 +32,6 @@ namespace BilletSys
             :base(Nummerplade, Dato)
         {
 
-        }
-        public  string Nummerplade()
-        {
-            return "13245678";
         }
     }
     
