@@ -16,7 +16,7 @@ namespace BilletSys.Tests
         {
             var bil = new Bil("1234567", DateTime.Today);
 
-            int Pris = bil.Pris();
+            double Pris = bil.Pris();
 
             Assert.AreEqual(240, Pris);
         }
@@ -24,7 +24,7 @@ namespace BilletSys.Tests
         {
             var bil = new Bil("1234567", DateTime.Today);
 
-            int Pris = bil.Pris();
+            double Pris = bil.Pris();
 
             Assert.AreEqual(240, Pris);
         }
@@ -45,6 +45,16 @@ namespace BilletSys.Tests
         {
             Bil skoda = new Bil("12345678", DateTime.Today);
             
+        }
+        [TestMethod()]
+        public void PrisMedBrobizzTest()
+        {
+            Bil b1 = new Bil("1234567", DateTime.Today);
+
+            b1.Brobizz = true;
+            double pris = b1.Pris();
+
+            Assert.AreEqual(228, pris);
         }
     }
 }

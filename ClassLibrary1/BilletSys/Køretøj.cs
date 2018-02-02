@@ -8,7 +8,7 @@ namespace BilletSys
 {
     public abstract class Køretøj
     {
-        public abstract int Pris();
+        public abstract double Pris();
         
         public virtual string Nummerplade
         {
@@ -24,14 +24,8 @@ namespace BilletSys
             set { value = Dato; }
         }
         
-        public virtual string Type()
-        {
-            return "Køretøj";
-        }
-        public int Rabat
-        {
-            get;set;
-        }
+        public bool Brobizz { get; set; }
+
         public Køretøj( string Nummerplade, DateTime Dato)
         {
             if (Nummerplade.Length > 7)
@@ -39,10 +33,7 @@ namespace BilletSys
                 throw new ArgumentException("Nummerplade er for lang");
             }
         }
-        public Køretøj(int rabat)
-        {
-            this.Rabat = rabat;
-        }
-       
+        public abstract string Type();
+        
     }
 }

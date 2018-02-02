@@ -8,13 +8,16 @@ namespace BilletSys
 {
     public class Bil : Køretøj
     {
-        public override int Pris()
+        public override double Pris()
         {
-            int PrisMedBrobizz = 240 - Rabat;
-
-            if (PrisMedBrobizz <= 0)
-                throw new ArgumentException("For stor rabat");
-            return PrisMedBrobizz;
+            if (Brobizz == true)
+            {
+                return 240 *0.95;
+            }
+            else
+            {
+                return 240;
+            }
         }
         public override string Type()
         {
@@ -22,11 +25,6 @@ namespace BilletSys
         }
         public Bil(string Nummerplade, DateTime Dato) 
             :base(Nummerplade, Dato)
-        {
-
-        }
-        public Bil(int rabat) 
-            :base(rabat)
         {
 
         }
