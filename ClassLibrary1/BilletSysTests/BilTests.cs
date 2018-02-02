@@ -14,7 +14,7 @@ namespace BilletSys.Tests
         [TestMethod()]
         public void PrisTest()
         {
-            var bil = new Bil("1234567");
+            var bil = new Bil("1234567", DateTime.Today);
 
             int Pris = bil.Pris();
 
@@ -22,7 +22,7 @@ namespace BilletSys.Tests
         }
         public void PrisTestMedBrobizz()
         {
-            var bil = new Bil("1234567");
+            var bil = new Bil("1234567", DateTime.Today);
 
             int Pris = bil.Pris();
 
@@ -32,7 +32,7 @@ namespace BilletSys.Tests
         [TestMethod()]
         public void KøretøjTest()
         {
-            var bil = new Bil("1234567");
+            var bil = new Bil("1234567", DateTime.Today);
 
             string Køretøj = bil.Type();
 
@@ -43,7 +43,7 @@ namespace BilletSys.Tests
             "Nummerplade er for lang")]
         public void NummerpladeForLangExceptionTest()
         {
-            Bil skoda = new Bil("12345678");
+            Bil skoda = new Bil("12345678", DateTime.Today);
             
         }
     }

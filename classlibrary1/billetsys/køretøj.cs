@@ -14,11 +14,7 @@ namespace BilletSys
         {
             get
             {
-                if (Nummerplade.Length >7)
-                {
-                    throw new ArgumentException("Nummerplade er for lang");
-                }
-                return Nummerplade;
+            return Nummerplade;
             }
             set { value = Nummerplade; }
         }
@@ -28,22 +24,16 @@ namespace BilletSys
             set { value = Dato; }
         }
         
-        public virtual string Type()
-        {
-            return "Køretøj";
-        }
-        public int Rabat
-        {
-            get;set;
-        }
-        public Køretøj()
-        {
+        public bool Brobizz { get; set; }
 
-        }
-        public Køretøj(int rabat)
+        public Køretøj( string Nummerplade, DateTime Dato)
         {
-            this.Rabat = rabat;
+            if (Nummerplade.Length > 7)
+            {
+                throw new ArgumentException("Nummerplade er for lang");
+            }
         }
-       
+        public abstract string Type();
+        
     }
 }

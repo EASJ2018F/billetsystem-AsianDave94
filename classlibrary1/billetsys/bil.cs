@@ -6,25 +6,29 @@ using System.Threading.Tasks;
 
 namespace BilletSys
 {
-    public class MC : Køretøj
+    public class Bil : Køretøj
     {
-        public MC(string Nummerplade, DateTime Dato) : 
-            base(Nummerplade, Dato)
-        {
-        }
-
         public override int Pris()
         {
             if (Brobizz == true)
             {
-                return (5 / 100 * 125) - 125;
+                return (5/100*240) - 240;
             }
-            return 125;
+            return 240;
         }
         public override string Type()
         {
-            return "MC";
+            return "Bil";
         }
-        
+        public Bil(string Nummerplade, DateTime Dato) 
+            :base(Nummerplade, Dato)
+        {
+
+        }
+        public string Nummerplade()
+        {
+            return "13245678";
+        }
     }
+    
 }
